@@ -5,3 +5,6 @@ tests/__pycache__/test_blacklists.cpython-312-pytest-8.3.3.pyc
 /tests/__pycache__
 /blacklist/__pycache__
 /blacklist/__pycache__
+.vscode/settings.json
+/blacklist/resources/__pycache__
+/blacklist/resources/__pycache__

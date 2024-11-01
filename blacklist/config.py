@@ -4,6 +4,6 @@ from dotenv import load_dotenv
 load_dotenv()  
 
 class Config:
-    SQLALCHEMY_DATABASE_URI = getenv('DATABASE_URI')
+    SQLALCHEMY_DATABASE_URI = 'postgresql://postgres:admin@localhost:5432/postgres'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
-    JWT_SECRET_KEY = getenv('JWT_SECRET_KEY')
+    JWT_SECRET_KEY = 'tu_clave_jwt_secreta'

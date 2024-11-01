@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timezone
 from flask_sqlalchemy import SQLAlchemy
 
 db = SQLAlchemy()
@@ -9,4 +9,4 @@ class Blacklist(db.Model):
     app_uuid = db.Column(db.String(36), nullable=False)
     blocked_reason = db.Column(db.String(255))
     ip_address = db.Column(db.String(50))
-    created_at = db.Column(db.DateTime, default=datetime.utcnow)
+    created_at = db.Column(db.DateTime, default=lambda: datetime.now(timezone.utc))
